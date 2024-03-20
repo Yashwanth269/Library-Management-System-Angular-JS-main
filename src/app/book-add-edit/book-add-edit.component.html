@@ -1,0 +1,43 @@
+<div mat-dialog-title>
+    <h1>Add Book</h1>
+</div>
+<form [formGroup]="bookForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Title</mat-label>
+                <input matInput type="text" placeholder="Enter book title" formControlName="title">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Author</mat-label>
+                <input matInput type="text" placeholder="Enter author name" formControlName="author">
+            </mat-form-field>
+        </div>
+    
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Genre</mat-label>
+                <input matInput type="text" placeholder="Enter book genre" formControlName="genre">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Published Year</mat-label>
+                <input matInput type="number" placeholder="Enter published year" formControlName="publishedYear">
+            </mat-form-field>  
+        </div>
+    
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>ISBN</mat-label>
+                <input matInput type="text" placeholder="Enter book ISBN" formControlName="isbn">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Language</mat-label>
+                <input matInput type="text" placeholder="Enter book language" formControlName="language">
+            </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+    </div>
+</form>
