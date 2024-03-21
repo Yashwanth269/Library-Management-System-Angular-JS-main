@@ -1,27 +1,65 @@
-# LibraryManagementSystem
+# Library Management System (LMS)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+The Library Management System (LMS) is a comprehensive web application designed to automate and streamline library operations, including book management and user interactions. This system provides librarians and users with an efficient platform to manage library resources and access library services.
 
-## Development server
+## Key Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Book Management
+- **Add Book:** Allow librarians to add new books to the library database, including details such as title, genre, publication year, and ISBN.
+- **Edit Book:** Enable librarians to update book information, such as modifying book details or changing availability status.
+- **Delete Book:** Provide the functionality to remove books from the library database when they are no longer in circulation.
 
-## Code scaffolding
+### User Management
+- **User Registration:** Allow new users to register for library membership, providing necessary personal details such as name, email, and contact information.
+- **Edit User Profile:** Enable users to update their profile information, such as changing contact details or updating preferences.
+- **Delete User Account:** Provide administrators with the ability to delete user accounts if necessary.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Borrowing and Returning Books
+- **Borrow Book:** Allow registered users to borrow books from the library by selecting available books and specifying the borrowing duration.
+- **Return Book:** Enable users to return borrowed books to the library after the borrowing period has ended.
 
-## Build
+### Search and Filter
+- **Search Books:** Implement a search functionality to allow users to search for books by title, genre, or ISBN.
+- **Filter Books:** Provide filtering options to refine search results based on criteria such as availability or publication year.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### User Authentication and Authorization
+- **Login:** Implement user authentication to ensure secure access to the system, allowing users to log in with their credentials.
+- **Role-based Access Control:** Define user roles such as librarian, staff, and patron, with appropriate permissions for each role to access system features.
 
-## Running unit tests
+### User Interface
+- **Intuitive Interface:** Design a user-friendly interface with clear navigation and intuitive controls for ease of use by both librarians and users.
+- **Responsive Design:** Ensure the application is responsive and accessible across various devices and screen sizes.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Error Handling and Validation
+- **Input Validation:** Validate user inputs to ensure data integrity and prevent errors during data entry.
+- **Error Messages:** Provide informative error messages to guide users in case of invalid inputs or system errors.
 
-## Running end-to-end tests
+### CRUD Operations
+- **Create:** Enable the creation of new entities such as books and user accounts.
+- **Read:** Provide read access to existing data, allowing users to view book details and user profiles.
+- **Update:** Allow users to modify existing data, such as editing book information or updating user profiles.
+- **Delete:** Provide functionality to delete records from the system, such as removing books from the library catalog or deleting user accounts.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Installation
 
-## Further help
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd library-management-system`
+3. Install Angular Materials: `ng add @angular/material`
+4. Install dependencies: `npm install`
+5. Start the Angular server: `ng serve`
+6. Start the JSON Server: `json-server --watch db.json --port 3000`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Usage
+
+1. Register as a new user or login with existing credentials.
+2. Browse the library catalog, search for books, and view book details.
+3. Borrow books and return them within the specified duration.
+4. Librarians can manage books, users, and perform administrative tasks.
+
+## Technologies Used
+
+- Angular: Frontend framework for building the user interface.
+- TypeScript: Programming language for building Angular applications.
+- HTML/CSS: Markup and styling languages for designing web pages.
+- JSON Server: Backend service for simulating a REST API and providing book data.
+  
