@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="card">
+        <div class="banner">
+            <div *ngIf="gender">
+                <img src="../../../../../assets/img/man.png" alt="">
+            </div>
+            <div *ngIf="!gender">
+                <img src="../../../../../assets/img/woman.png" alt="">
+            </div>
+        </div>
+        <h1>
+            Your Profile
+        </h1>
+
+        <table class="table table-user-information">
+            <tbody>
+                <tr>
+                    <td>Name:</td>
+                    <td>{{user?.name}}</td>
+                </tr>
+                <tr>
+                    <td>Mobile Number:</td>
+                    <td>{{user?.phoneNumber}}</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>{{user?.age}}</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>{{user?.gender}}</td>
+                </tr>
+
+                <tr>
+                    <td>E-Mail</td>
+                    <td>{{user?.email}}</td>
+                </tr>
+
+                <tr>
+
+                </tr>
+              
+
+            </tbody>
+        </table>
+        <div id="btn">
+            <a class="btn btn-outline-warning" routerLink="../update">Update</a>&nbsp; &nbsp;
+            <a class="btn btn-outline-warning" routerLink="../changepassword">Change Password</a>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,14 @@
+#one-page {
+    height: 100%;
+    background-image: url("https://cdn.wallpapersafari.com/91/90/Bmhy8U.jpg");
+    background-size: auto;
+    display: block;
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+}
+.body {
+    padding: 0;
+    margin: 0;
+    height: 87.5vh;
+}

@@ -1,0 +1,28 @@
+<body>
+	<h1>
+		Login Form
+	</h1>
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+		<div class="signup">
+			<form>
+				<label for="chk" aria-hidden="true">Admin </label>
+				<h5 class="text-danger">{{msg}}</h5>
+				<input type="email" name="email" placeholder="Email" required="" [(ngModel)]="admin.email">
+				<input type="password" name="pswd" placeholder="Password" required="" [(ngModel)]="admin.password">
+				<button type="button" (click)="adminLogin()"> Login</button>
+				<a class="register" routerLink="../adminregister">Register Here...</a>
+			</form>
+		</div>	
+		<div class="login">
+			<form>
+				<label for="chk" aria-hidden="true">User</label>
+				<h5 class="text-danger">{{msg}}</h5>
+				<input type="email" name="email" placeholder="Email" required="" [(ngModel)]="user.email">
+				<input type="password" name="pswd" placeholder="Password" required="" [(ngModel)]="user.password">
+				<button type="button" (click)="userLogin()"> Login</button>
+				<a class="studRegister" routerLink="../userregister">Register Here...</a>
+			</form>
+		</div>
+	</div>
+</body>

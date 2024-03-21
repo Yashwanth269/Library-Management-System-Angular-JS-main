@@ -1,0 +1,54 @@
+<div class="container">
+	<div class="login-box">
+		<h2>User Register</h2>
+		<form #registerform="ngForm">
+			<h3>{{msg}}</h3>
+			<div class="user-box">
+				<input type="text" name="name" required="" [(ngModel)]="user.name">
+				<label>First Name</label>
+			</div>
+			<div class="user-box">
+				<input type="number" name="phoneNumber" required="" [(ngModel)]="user.phoneNumber">
+				<label>Mobile Number</label>
+			</div>
+			<div class="user-box">
+				<input type="number" name="age" required="" [(ngModel)]="user.age">
+				<label>Age</label>
+			</div>
+			<div class="user-box">
+				<input type="text" name="email" required="" [(ngModel)]="user.email">
+				<label>E-Mail</label>
+			</div>
+			<div class="user-box">
+				<input type="password" name="password" required="" [(ngModel)]="user.password">
+				<label>Password</label>
+			</div>
+			<div class="radio">
+				<input class="form-check-input" type="radio" name="gender" 
+					value="male" [checked]="true" [(ngModel)]="user.gender">
+				<label class="form-check-label" for="gender">Male</label>&nbsp;&nbsp;
+				<input class="form-check-input" type="radio" name="gender" [(ngModel)]="user.gender"
+					value="female">
+				<label class="form-check-label" for="gender">Female</label>
+
+			</div>
+			<a class="btn" href="/login">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				Back
+			</a>&nbsp;
+
+			<Button [disabled]="registerform.form.invalid" class="btn" (click)="userRegister()">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				submit
+
+			</Button>
+
+		</form>
+	</div>
+</div>

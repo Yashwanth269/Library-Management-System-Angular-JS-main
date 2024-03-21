@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="card">
+        <h1> Update Your Profile</h1>
+        <form #updateform="ngForm">
+            <div class="field name-box">
+                <input type="text" [ngModel]="user?.name" (ngModelChange)="user.name = $event" name="name" required="" />
+                <label for="name">Name</label>
+
+            </div>
+
+            <div class="field phoneNumber-box">
+                <input type="text" [ngModel]="user?.phoneNumber" (ngModelChange)="user.phoneNumber = $event" name="phoneNumber" required="" />
+                <label for="phoneNumber">Mobile</label>
+
+            </div>
+                <!-- <div class="field name-email">
+                    <input type="text" [ngModel]="user?.email" (ngModelChange)="user.email = $event" name="email" required="" disabled/>
+                    <label for="email">E-Mail</label>
+                </div> -->
+
+            <div class="field age-box">
+                <input type="text" [ngModel]="user?.age" (ngModelChange)="user.age = $event" name="age" required=""  />
+                <label for="age">Age</label>
+            </div>
+            <div calss="radio">
+                <div class="radio1">
+                    <input class="form-check-input" type="radio" name="gender" value="male" [checked]="true" [ngModel]="user?.gender" (ngModelChange)="user.gender = $event">
+                    <label class="form-check-label" for="gender">Male</label>
+                </div>
+                <div class="radio2">
+                    <input class="form-check-input" type="radio" name="gender" [ngModel]="user?.gender" (ngModelChange)="user.gender = $event" value="female">
+                    <label class="form-check-label" for="gender">Female</label>
+                </div>
+            </div>
+
+            <div id="btn">
+                <a class="btn btn-warning" routerLink="../profile">Back</a>&nbsp; &nbsp;
+                <button class="btn btn-warning" (click)="updateUser()"
+                    [disabled]="updateform.form.invalid">Update</button>
+            </div>
+        </form>
+    </div>
+</div>

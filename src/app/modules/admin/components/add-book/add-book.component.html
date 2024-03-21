@@ -1,0 +1,38 @@
+<div class="col-lg-5" id="insertion_section">
+    <div class="topspace">
+        <form #form="ngForm" class="form-group ">
+            <div *ngIf="successMsg">
+                <div class="alert success">
+                    <span class="closebtn success" (click)="closeMsg()">×</span>
+                    <b>Record Added Successfully</b>.
+                </div>
+            </div>
+            <div *ngIf="errorMsg">
+                <div class="alert">
+                    <div class="closebtn" (click)="closeMsg()">×</div>
+                    <b>Oops, Something Went Wrong. Please Try Again Later...</b>
+                </div>
+            </div>
+            <div>
+                <label  for="bookName" class="text-light">Book Name</label>
+                <input type="text" class="form-control" name="title" [(ngModel)]="book.title" required="">
+            </div>
+            <div>
+                <label for="authorName" class="text-light">Author Name</label>
+                <input type="text" class="form-control " name="authorName" [(ngModel)]="book.authorName" required="">
+            </div>
+            <div>
+                <label for="cost" class="text-light">Cost</label>
+                <input type="number" class="form-control" name="cost" [(ngModel)]="book.cost" required="">
+            </div>
+            <div id="publisher-section">
+                <label for="quantity" class="text-light">Quantity</label>
+                <input type="number" class="form-control" name="quantity" [(ngModel)]="book.quantity" required="">
+            </div>
+            <div class="add-button mt-4">
+                <button [disabled]="form.form.invalid" type="button" class="btn btn-danger btn-block"
+                    (click)="addbook()">add</button>
+            </div>
+        </form>
+    </div>
+</div>

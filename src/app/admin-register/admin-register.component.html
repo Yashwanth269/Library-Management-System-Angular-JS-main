@@ -1,0 +1,52 @@
+<div class="container">
+	<div class="login-box">
+		<h2>Admin Register</h2>
+		<form #registerform="ngForm">
+			<h3>{{msg}}</h3>
+			<div class="user-box">
+				<input type="text" name="name" required="" [(ngModel)]="admin.name">
+				<label>First Name</label>
+			</div>
+			<div class="user-box">
+				<input type="number" name="phoneNumber" required="" [(ngModel)]="admin.phoneNumber">
+				<label>Mobile Number</label>
+			</div>
+			<div class="user-box">
+				<input type="number" name="age" required [(ngModel)]="admin.age" >
+				<label>Age</label>
+			</div>
+			<div class="user-box">
+				<input type="email" name="email" [(ngModel)]="admin.email" required pattern="^\w+@[a-zA-z_]+?\.[a-zA-Z]{2,3}$">
+				<label>E-Mail</label>
+			</div>
+			<div class="user-box">
+				<input type="password" name="password" required [(ngModel)]="admin.password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+				<label>Password</label>
+			</div>
+			<div class="radio">
+				<input class="form-check-input" type="radio" name="gender" value="male" checked="true"
+					[(ngModel)]="admin.gender">
+				<label class="form-check-label" for="gender">Male</label>&nbsp;&nbsp;
+				<input class="form-check-input" type="radio" name="gender" [(ngModel)]="admin.gender" value="female">
+				<label class="form-check-label" for="gender">Female</label>
+			</div>
+			<a class="btn" href="/login">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				Back
+			</a>&nbsp;
+
+			<Button type="submit" class="btn" (click)="adminRegister()">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				submit
+
+			</Button>
+
+		</form>
+	</div>
+</div>

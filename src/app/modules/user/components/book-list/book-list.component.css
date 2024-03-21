@@ -1,0 +1,17 @@
+p {
+  font-family: Lato;
+}
+
+.topspace {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 15px 10px 15px 10px;
+  width: 100%;
+  margin: auto;
+}
+
+#insertion_section {
+  border-radius: 7.5px;
+  padding: 100px 10px 15px 10px;
+  width: 100%;
+  margin: auto;
+}

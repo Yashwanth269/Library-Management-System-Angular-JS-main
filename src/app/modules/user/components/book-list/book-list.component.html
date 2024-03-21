@@ -1,0 +1,28 @@
+<div class="col-lg-5" id="insertion_section">
+    <div class="topspace">
+        <table id="dataTable" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Title</th>
+                    <th>Author Name</th>
+                    <th>Cost </th>
+                    <th>No.of Copy</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books;index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{book.title}}</td>
+                    <td>{{book.authorName}}</td>
+                    <td>{{book.cost}}/-</td>
+                    <td>{{book.quantity}}</td>
+                    <td>
+                        <a class="btn btn-outline-primary" routerLink="../bookorder">Book</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
