@@ -14,9 +14,6 @@ The Library Management System (LMS) is a comprehensive web application designed 
 - **Edit User Profile:** Enable users to update their profile information, such as changing contact details or updating preferences.
 - **Delete User Account:** Provide administrators with the ability to delete user accounts if necessary.
 
-### Borrowing and Returning Books
-- **Borrow Book:** Allow registered users to borrow books from the library by selecting available books and specifying the borrowing duration.
-- **Return Book:** Enable users to return borrowed books to the library after the borrowing period has ended.
 
 ### Search and Filter
 - **Search Books:** Implement a search functionality to allow users to search for books by title, genre, or ISBN.
