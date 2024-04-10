@@ -1,48 +1,21 @@
-<mat-toolbar color="primary">
-  <span>Library Management System</span>
-  <span class="example-spacer"></span>
-  <button mat-raised-button (click)="openAddEditBookForm()">
-    Add Book
-  </button>
-</mat-toolbar>
+<!-- Navigation -->
+    <div class = "navigation">
+        <nav>
+            <a routerLink = '/home' routerLinkActive = "active"> Home </a>
+            <br>
+            <a routerLink = '/book' > Book </a>
+            <br>
+            <a routerLink = '/user' > User </a>
+            <br>
+            <a routerLink = '/issue' > Issue</a>
+        </nav>
+    </div>    
 
-<div *ngIf="value; else Else">
-  <router-outlet></router-outlet>
-</div>
+    <!-- Main content -->
+<div class = "main">  
+    <h1>{{title}}</h1>
+    <br>
 
-<ng-template #Else>
-  <div class="main-body">
-    <mat-form-field>
-      <mat-label>Filter</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="Search by title, author, genre...">
-    </mat-form-field>
-
-    <div class="table-container">
-      <table mat-table [dataSource]="dataSource" matSort>
-
-        <!-- Column definitions -->
-        <ng-container matColumnDef="title">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
-          <td mat-cell *matCellDef="let row">{{ row.title }}</td>
-        </ng-container>
-
-        <!-- Repeat similar ng-container for other columns like 'author', 'genre', 'publishedYear', 'isbn', and 'language' -->
-
-        <!-- Row definitions -->
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-        <!-- Row shown when there is no matching data -->
-        <tr class="mat-row" *matNoDataRow>
-          <td class="mat-cell" colspan="6">
-            No books found matching the filter "{{ input?.value || ' ' }}"
-          </td>
-          
-        </tr>
-      </table>
-
-      <!-- Pagination controls -->
-      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of books"></mat-paginator>
-    </div>
-  </div>
-</ng-template>
+    <!-- Router Outlet -->
+        <router-outlet></router-outlet>
+</div>      

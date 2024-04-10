@@ -1,57 +1,67 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { BookAddEditComponent } from './book-add-edit/book-add-edit.component';
+import { BookComponent } from './book/book.component';
+import { BookServiceComponent } from './book/book-service/book-service.component';
+import { HttpExceptionHandler } from "./service-config/http-exception-service.component";
+import { HomeComponent } from './home/home.component';
+import { BookAddEditComponent } from './book/book-add-edit/book-add-edit.component';
+import { UserComponent } from './user/user.component';
+import { UserServiceComponent } from './user/user-service/user-service.component';
+import { UserAddEditComponent } from './user/user-add-edit/user-add-edit.component';
+import { IssueServiceComponent } from './issue/issue-service/issue-service.component';
+import { IssueComponent } from './issue/issue.component';
+import { IssueAddEditComponent } from './issue/issue-add-edit/issue-add-edit.component';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDatepickerModule } from '@angular/material/datepicker';
+import { AppRoutingModule } from './app-routing.module';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field'; //Import for material form
+import { MatInputModule } from '@angular/material/input'; //Import for material form
+import { MatSelectModule } from '@angular/material/select'; //Select type material 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MatMenuModule } from '@angular/material/menu';
-
-
-import { TokenInterceptor } from './token.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    DashboardComponent,
-    BookAddEditComponent
+    BookComponent,
+    HomeComponent,
+    BookAddEditComponent,
+    BookAddEditComponent,
+    UserComponent,
+    UserAddEditComponent,
+    IssueComponent,
+    IssueAddEditComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    AppRoutingModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
     MatTableModule,
-    MatPaginatorModule,
-    MatIconModule,
+    AppRoutingModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule, 
+    MatInputModule, 
+    MatSelectModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
     MatDatepickerModule,
-    MatNativeDateModule,
-    MatMenuModule
+    MatNativeDateModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+    BookServiceComponent, 
+    HttpExceptionHandler,
+    UserServiceComponent,
+    IssueServiceComponent
   ],
   bootstrap: [AppComponent]
 })
